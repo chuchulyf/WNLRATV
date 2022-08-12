@@ -28,9 +28,9 @@ param   = SetParam_NWT(Noi_H, Sigma_ratio);
 param.initial_rank = initial_rank;
 param.maxiter = 15;
 param.patnum        = 200;
-param.lambda        = LLam(kk);
+param.lambda        = 2e-1;
 [prior, model] = InitialPara( param,0,B);
 tic
-[Re_hsi,W_n,L,C] = WNLRATV(Noi_H,Ori_H, Rank,ModelPar, param, model, prior);
+[Re_hsi,W_n,L,C] = WNLRATV2(Noi_H,Ori_H, Rank,ModelPar, param, model, prior);
 toc;
 
